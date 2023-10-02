@@ -1,10 +1,52 @@
 <html>
-<head><title>Guess The Number</title></head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess The Number</title>
+
+    <style>
+        img{
+            border: 0cap;
+            padding: 0%;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('https://images.unsplash.com/photo-1621877361185-5e3cd6f3c61b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YW1hem9uJTIwZm9yZXN0fGVufDB8fDB8fHww&auto=format&fit=crop&w=600&q=60');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        h1 {
+            background: linear-gradient(to right, #ffafbd, #379821);
+            color: #3e3e3e;
+            font-family: 'Arial', sans-serif;
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            padding: 20px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+
+            &:hover {
+                transform: scale(1.1);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+}
+
+    </style>
+</head>
 <body>
-    <h1>Guess The Number</h1>
+    <h1>Guess The Number - Refresh the page to play again!</h1>
     <script>
         let num = Math.floor(Math.random() * 100) + 1;
-        let guess = prompt("Guess a number between 1 and 100");
+        let guess = prompt("Guess a number between 1 and 100! Buckle up, you're in it until you win it! Grab some snacks, it might take a while!😊");
         let counter = 0;
         let gotIt = false;
         let feedback = "";
